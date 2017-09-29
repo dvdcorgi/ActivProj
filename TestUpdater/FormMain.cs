@@ -27,11 +27,18 @@ namespace TestUpdater
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             ClassCombine combine = new ClassCombine();
-            var itemInput = txInput.Text;
-            combine.SetItem(itemInput, 1);
 
-            Console.WriteLine(combine.GetName());
-            Console.WriteLine(combine.GetLevel());
+            var itemInput = txInput.Text;
+
+            combine.SetItem(itemInput);
+
+            listOutput.Items.Add(combine.GetName() + " " + combine.GetLevel());
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            listOutput.Items.Clear();
+        }
+
     }
 }

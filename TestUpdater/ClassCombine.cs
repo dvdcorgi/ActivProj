@@ -10,11 +10,11 @@ namespace TestUpdater
     {
         private Item MyItem { get; set; }
 
-        public void SetItem(string name, int level)
+        public void SetItem(string name)
         {
             Item thisItem = new Item();
             thisItem.Name = name;
-            thisItem.Level = level;
+            thisItem.Level = RandomLevel();
 
             MyItem = thisItem;
         }
@@ -27,6 +27,12 @@ namespace TestUpdater
         public int GetLevel()
         {
             return MyItem.Level;
+        }
+
+        private int RandomLevel()
+        {
+            Random r = new Random();
+            return r.Next(1, 100);
         }
     }
 }

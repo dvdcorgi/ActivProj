@@ -30,13 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnSubmit = new System.Windows.Forms.Button();
+            this.listOutput = new System.Windows.Forms.ListBox();
             this.txInput = new System.Windows.Forms.TextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnClear);
+            this.groupBox1.Controls.Add(this.listOutput);
             this.groupBox1.Controls.Add(this.txInput);
             this.groupBox1.Controls.Add(this.btnSubmit);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -45,9 +49,24 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // listOutput
+            // 
+            this.listOutput.FormattingEnabled = true;
+            this.listOutput.Location = new System.Drawing.Point(134, 19);
+            this.listOutput.Name = "listOutput";
+            this.listOutput.Size = new System.Drawing.Size(120, 108);
+            this.listOutput.TabIndex = 2;
+            // 
+            // txInput
+            // 
+            this.txInput.Location = new System.Drawing.Point(6, 19);
+            this.txInput.Name = "txInput";
+            this.txInput.Size = new System.Drawing.Size(98, 20);
+            this.txInput.TabIndex = 1;
+            // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(81, 70);
+            this.btnSubmit.Location = new System.Drawing.Point(6, 45);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(98, 23);
             this.btnSubmit.TabIndex = 0;
@@ -55,12 +74,15 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // txInput
+            // btnClear
             // 
-            this.txInput.Location = new System.Drawing.Point(81, 44);
-            this.txInput.Name = "txInput";
-            this.txInput.Size = new System.Drawing.Size(98, 20);
-            this.txInput.TabIndex = 1;
+            this.btnClear.Location = new System.Drawing.Point(6, 104);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(98, 23);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // FormMain
             // 
@@ -84,6 +106,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.TextBox txInput;
+        private System.Windows.Forms.ListBox listOutput;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 
