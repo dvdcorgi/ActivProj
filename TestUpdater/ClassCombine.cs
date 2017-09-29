@@ -10,14 +10,13 @@ namespace TestUpdater
     {
         private Item MyItem { get; set; }
 
-        public Item SetItem(string name, int level)
+        public void SetItem(string name, int level)
         {
             Item thisItem = new Item();
             thisItem.Name = name;
             thisItem.Level = level;
 
             MyItem = thisItem;
-            return MyItem;
         }
 
         public string GetName()
