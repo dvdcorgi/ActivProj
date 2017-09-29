@@ -28,7 +28,7 @@ namespace TestUpdater
         {
             ClassCombine combine = new ClassCombine();
             var itemInput = txInput.Text;
-            var itemOutput = combine.SetItem(itemInput, 1);
+            combine.SetItem(itemInput, 1);
 
             Console.WriteLine(combine.GetName());
             Console.WriteLine(combine.GetLevel());
