@@ -23,5 +23,15 @@ namespace TestUpdater
         {
             this.Text = "Main v" + programVersion;
         }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            ClassCombine combine = new ClassCombine();
+            var itemInput = txInput.Text;
+            var itemOutput = combine.SetItem(itemInput, 1);
+
+            Console.WriteLine(combine.GetName());
+            Console.WriteLine(combine.GetLevel());
+        }
     }
 }
