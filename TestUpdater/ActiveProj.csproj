@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassCombine.cs" />
+    <Compile Include="ClassHash.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>

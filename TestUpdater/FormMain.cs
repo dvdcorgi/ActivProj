@@ -40,5 +40,15 @@ namespace TestUpdater
             listOutput.Items.Clear();
         }
 
+        private async void txtInString_TextChanged(object sender, EventArgs e)
+        {
+            await Task.Delay(0);
+            ClassHash c = new ClassHash();
+            var txt = txtInString.Text;
+            var tOut = c.sha256_hash(txt);
+            txtOutString.Text = tOut;
+
+            txtOut512.Text = c.sha512(txt);
+        }
     }
 }
